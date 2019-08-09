@@ -1,35 +1,23 @@
 package Test07Aug;
 
-public class Diamond {
-	int i,j,k,l=1;
+public class Palindrome {
+	String s1="DAD";
+	String rev="";
+	int len = s1.length();
 	public void check(){
-		for(i=1;i<=5;i++){
-			for(j=2;j>=i;j--){
-				System.out.println(" ");
-			}
-			for(k=1;k<=l;k++){
-				System.out.println("*");
-				
-			}
-			l=l+2;
+		for(int i=len-1;i>=0;i--){
+			rev+=s1.charAt(i);
 			
 		}
-		for(i=1;i<=2;i++){
-			for(j=1;j<=i;j++){
-				System.out.println(" ");
-			}
-			for(k=3;k>l;k--){
-				System.out.println("*");
-			}
-			l=l+2;
+		System.out.println(rev);
+		if(s1.equals(rev)){
+			System.out.println("String is Palindrome: "+s1);
 		}
-		
-	
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Diamond obj=new Diamond();
+		Palindrome obj=new Palindrome();
 		obj.check();
 	}
 
